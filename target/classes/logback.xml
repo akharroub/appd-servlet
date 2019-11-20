@@ -1,0 +1,19 @@
+<configuration>
+	<appender name="CDAOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{HH:mm} [%thread] %-5level %logger{36} %line - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<root level="error">
+		<appender-ref ref="CDAOUT" />
+	</root>
+
+	<logger name="org.hibernate.SQL" level="debug">
+	</logger>
+
+
+</configuration>
